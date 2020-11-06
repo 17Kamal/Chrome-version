@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Chrome-version</string>
+    <string name="my_image_description"> Chrome version....</string>
+    <string name="chrome">Application version</string>
 </resources>
