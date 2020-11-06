@@ -25,25 +25,6 @@ public class MainActivity extends AppCompatActivity {
         String str=checkVersion("com.android.chrome");
         helloTextView.setText(str);
     }
-    /*private String isChromeInstalledAndVersionGreaterThan65() {
-        PackageInfo pInfo;
-        try {
-            pInfo = getPackageManager().getPackageInfo("com.android.chrome", 0);
-        } catch (PackageManager.NameNotFoundException e) {
-            //chrome is not installed on the device
-            return "chrome is not installed on the device";
-        }
-        if (pInfo != null) {
-            //Chrome has versions like 68.0.3440.91, we need to find the major version
-            //using the first dot we find in the string
-            int firstDotIndex = pInfo.versionName.indexOf(".");
-            //take only the number before the first dot excluding the dot itself
-            String majorVersion = pInfo.versionName.substring(0, firstDotIndex);
-            return majorVersion;
-        }
-        return "0";
-    }
-    String str= isChromeInstalledAndVersionGreaterThan65();*/
     private String checkVersion(String uri) {
         String versionName;
         int version = 0;
