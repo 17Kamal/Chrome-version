@@ -1,6 +1,6 @@
 /*author: Kamal Kumar */
-package com.example.chrome_version;
 
+package com.example.chrome_version;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -12,16 +12,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final TextView helloTextView = (TextView) findViewById(R.id.text_view_id);
+        final TextView Textview = (TextView) findViewById(R.id.text_view_id);
         String str=checkVersion("com.android.chrome");
-        helloTextView.setText(str);
+        Textview.setText(str);
     }
     private String checkVersion(String uri) {
         String versionName;
         int version = 0;
-        PackageManager pm = getPackageManager();
+        PackageManager packageManager = getPackageManager();
         try {
-            versionName = pm.getPackageInfo(uri, PackageManager.GET_ACTIVITIES).versionName;
+            versionName = packageManager.getPackageInfo(uri, PackageManager.GET_ACTIVITIES).versionName;
 
             return versionName ;
         } catch (PackageManager.NameNotFoundException e) {
