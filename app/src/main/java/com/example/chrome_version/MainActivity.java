@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final TextView Textview = (TextView) findViewById(R.id.text_view_id);
+        //call a function checkVersion and pass 'chrome app' as argument.
         String str=checkVersion("com.android.chrome");
         Textview.setText(str);
     }
@@ -29,5 +30,5 @@ public class MainActivity extends AppCompatActivity {
         }
         return "0";
     }
-    
+
 }
